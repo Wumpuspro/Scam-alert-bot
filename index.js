@@ -1,46 +1,47 @@
-const Discord = require("discord.js");
-const client = new Discord.Client({
-  ws: {
-        intents: [
-          "DIRECT_MESSAGES",
-          "DIRECT_MESSAGE_REACTIONS",
-          "GUILDS",
-          "GUILD_MEMBERS",
-          "GUILD_MESSAGES",
-          "GUILD_MESSAGE_REACTIONS",
-        ],
-  }
-});
-const config = require("./Tools/config");
-const database = require("./Tools/database");
+const { Client, Message, MessageEmbed, Collection } = require("discord.js");
+const colors = require("colors");
 const fs = require("fs");
-client.commands = new Discord.Collection();
-client.aliases = new Discord.Collection();
+const client = new Client({
+  messageCacheLifetime: 60,
+  fetchAllMembers: false,
+  messageCacheMaxSize: 10,
+  restTimeOffset: 0,
+  restWsBridgetimeout: 100,
+  shards: "auto",
+  allowedMentions: {
+    parse: ["roles", "users", "everyone"],
+    repliedUser: true,
+  },
+  partials: ["MESSAGE", "CHANNEL", "REACTION"],
+  intents: [
+    "GUILDS",
+    "GUILD_MEMBERS",
+    "GUILD_BANS",
+    "GUILD_EMOJIS",
+    "GUILD_MESSAGE_REACTIONS",
+    "GUILD_MESSAGES",
+  ],
+});
+module.exports = client;
+const config = require("./config/config.json");
+const db = require("./tools/database.js");
+client.db = db;
 
-//Commands
-fs.readdir("./commands/", (err, files) => {
-  if (err) console.log(err);
-  let jsfile = files.filter((f) => f.split(".").pop() === "js");
-  if (jsfile.length <= 0) {
-    console.log("Couldn't find any commands");
-    return;
-  }
-  jsfile.forEach((f) => {
-    let props = require(`./commands/${f}`);
-    console.log(`${f} Loaded`);
-    client.commands.set(props.help.name, props);
-  });
+
+const prefix = config.prefix;
+const token = config.token;
+// Global Variables
+client.commands = new Collection();
+client.aliases = new Collection();
+client.events = new Collection();
+client.cooldowns = new Collection();
+client.slashCommands = new Collection();
+client.categories = fs.readdirSync("./commands/");
+
+// Initializing the project
+//Loading files, with the client variable like Command Handler, Event Handler, ...
+["command"].forEach((handler) => {
+  require(`./handler/${handler}`)(client);
 });
 
-//Client Events
-fs.readdir("./events/", (err, files) => {
-  if (err) return console.log(err);
-  files.forEach((f) => {
-    const event = require(`./events/${f}`);
-    let eventName = f.split(".")[0];
-    console.log(`Event Loaded: ${f}`);
-    client.on(eventName, event.bind(null, client));
-  });
-});
-
-client.login(config.token);
+client.login(token);
