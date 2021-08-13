@@ -27,6 +27,16 @@ const config = require("./config/config.json");
 const db = require("./tools/database.js");
 client.db = db;
 
+const mongoose = require("mongoose");
+mongoose
+  .connect(config.mongooseConnectionString, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex: true,
+  })
+  .then(console.log("MongoDB Conneted.."));
+
 
 const prefix = config.prefix;
 const token = config.token;
