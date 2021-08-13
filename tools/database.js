@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
+const config = require('../config/config.json');
+const client = require("..");
 
-mongoose.connect("your_mongo_url", {
+mongoose.connect.(config.mongooseConnectionString, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
