@@ -6,7 +6,7 @@ const moment = require("moment")
 module.exports = {
   name: "scam-alert",
   aliases: ["case-info", "uidinfo", "uid-info"],
-  categories: "other",
+  categories: "scam list",
   permissions: " ",
   description: "Send information about case",
   usage: "",
