@@ -35,7 +35,7 @@ client.on("messageCreate", async (message) => {
       return message.channel.send({ embeds: [perms] });
 
 
-    //Check if user is on cooldown with the cmd, with Tomato#6966's Function from /handlers/functions.js
+    
     if (onCoolDown(message, command)) {
       let cool = new MessageEmbed()
       .setDescription(`❌ Please wait ${onCoolDown(message, command)} more Second(s) before reusing the ${command.name} command.`)
@@ -44,5 +44,5 @@ client.on("messageCreate", async (message) => {
     await command.run(client, message, args, prefix);
   }
 
-  // new start from here
+ 
 });
