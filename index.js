@@ -17,7 +17,7 @@ const client = new Client({
     "GUILDS",
     "GUILD_MEMBERS",
     "GUILD_BANS",
-    "GUILD_EMOJIS",
+    "GUILD_EMOJIS_AND_STICKERS",
     "GUILD_MESSAGE_REACTIONS",
     "GUILD_MESSAGES",
   ],
