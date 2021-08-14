@@ -4,6 +4,7 @@ var ee = require("../../config/embed.json");
 var config = require("../../config/config.json");
 let UID = require("../Tools/ScamUID.js");
 const { owner } = require("../config/config.json");
+const moment = require("moment")
 
 module.exports = {
   name: "add list",
