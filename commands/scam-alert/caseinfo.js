@@ -1,5 +1,6 @@
 const Scam = require("../Schema/ScamSchema");
 const { Client, Message, MessageEmbed } = require("discord.js");
+var ee = require("../../config/embed.json");
 var config = require("../../config/config.json");
 const moment = require("moment")
 
