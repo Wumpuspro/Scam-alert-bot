@@ -5,3 +5,6 @@
 .vscode export-ignore
 .github export-ignore
 README.md export-ignore
+
+# Line endings
+* text=auto
