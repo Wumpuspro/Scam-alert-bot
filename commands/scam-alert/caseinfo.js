@@ -25,7 +25,6 @@ module.exports = {
     return message.channel.send(`**No Case Found With The Provided UID**`);
 
   let embed = new discord.MessageEmbed()
-    .setColor(ee.color)
     .setTitle(`Scam Details`)
     .setDescription(
       `
@@ -39,16 +38,10 @@ module.exports = {
 -----------------------------------------------------------------------
 `
     )
-        .setThumbnail(
-        message.guild.iconURL({
-          dynamic: true,
-        })
-      )
-     .setFooter(
-        "ID: " + message.guild.id,
-        message.guild.iconURL({
-          dynamic: true,
-        })
-      )
+        .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512 }))
+        .setColor(ee.color)
+        .setFooter(ee.footertext, ee.footericon)
+  
+  
   message.channel.send(embed);
 };
