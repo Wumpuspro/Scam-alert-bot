@@ -1,5 +1,10 @@
 <h1 align="center"> Scam Alert With Discord.jsv13 </h1>
 
+Don't Forgot to Suscribe to [YT](https://youtube.com/NPGARMY/) 
+
+
+Join my [Discord server](https://discord.gg/UA6sSqKXpZ/)
+
 ## 📝 Starting Up
 1. Run `npm install` to install all packages 
 2. Edit `config folder` & `database.js with config folder database link`files and fill up all the things.
