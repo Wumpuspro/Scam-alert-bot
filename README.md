@@ -1,9 +1,9 @@
-<h1 align="center">Scam Alert With Discord.js</h1>
+<h1 align="center"> Scam Alert With Discord.jsv13 </h1>
 
 ## 📝 Starting Up
-1. Run `npm install` to install all packages
-2. Edit `config.js` & `database.js`files and fill up all the things.
-3. Run it by `npm start`
+1. Run `npm install` to install all packages 
+2. Edit `config folder` & `database.js with config folder database link`files and fill up all the things.
+3. Run it by `npm start or node index.js`
 
 ## 💨 Run the projects
 Glitch: [![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/Wumpuspro/Scam-alert-bot)
