@@ -120,6 +120,7 @@ module.exports = {
 
                 let Success = new discord.MessageEmbed()
                   .setTitle("ADDED SCAMMER TO LIST")
+                  .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512 }))
                    .setDescription(`
                    
         __**Case UID**__ - \`${CaseUID}\`
