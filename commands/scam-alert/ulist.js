@@ -6,8 +6,8 @@ let tool = require("lodash");
 module.exports = {
     name: "ulist",
     aliases: ["scam-list", "list"], 
-    categories : "other", 
-    permissions : 'Embed', 
+    categories : "scam-list", 
+    permissions : '', 
     description: "Show scammers list",
     cooldown : 10000,
     usage: '',
