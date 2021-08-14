@@ -1,6 +1,7 @@
 const { Client, Message, MessageEmbed } = require('discord.js');
 const Scam = require("../Schema/ScamSchema");
-var config = require('../../config/config.json');
+var ee = require("../../config/embed.json");
+var config = require("../../config/config.json");
 let tool = require("lodash");
 
 module.exports = {
@@ -9,7 +10,6 @@ module.exports = {
     categories : "scam-list", 
     permissions : '', 
     description: "Show scammers list",
-    cooldown : 10000,
     usage: '',
     /** 
      * @param {Client} client 
@@ -19,10 +19,11 @@ module.exports = {
     run: async(client, message, args) => {
   let ErrorEmbed = new MessageEmbed()
     .setTitle(`:x: Error`)
+    .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512 }))
     .setDescription(` **No Scammers Found**`)
-    .setColor(`RANDOM`)
     .setTimestamp()
-    .setFooter(`ScamAlert `);
+    .setColor(ee.color)
+    .setFooter(ee.footertext, ee.footericon)
 
   Scam.find({ Collection: "ScamCollection" }, async (err, data) => {
     if (err) return message.channel.send(err);
@@ -40,11 +41,11 @@ module.exports = {
         array.map((uScam) => {
           let ScamEmbed = new MessageEmbed()
             .setTitle(`Scammers List`)
+            .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512 }))
             .setDescription(`${uScam.join("\n\n")}`)
-            .setColor("RANDOM")
-            .setFooter(
-              `${message.author.username} You Can Get Details About The Case By Doing a!caseinfo <uid>`
-            );
+            .setColor(ee.color)
+            .setFooter(ee.footertext, ee.footericon)
+          
           message.channel.send(ScamEmbed);
         })
       );
