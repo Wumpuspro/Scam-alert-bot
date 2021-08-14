@@ -120,21 +120,18 @@ module.exports = {
 
                 let Success = new discord.MessageEmbed()
                   .setTitle("ADDED SCAMMER TO LIST")
-                  .setColor("RANDOM")
-                  .setFooter("ScamAlert | Official").setDescription(`
+                   .setDescription(`
+                   
         __**Case UID**__ - \`${CaseUID}\`
-        
-**__Reporter__** : \`${reporter}\`
-        
-**__Scammer__** : \`${Name}\`
-        
- **__Scammer ID__** : \`${ID}\`
-        
- **__Description__** : \`Can Be Found By Doing a!caseinfo <UID>\`
-**__Attachments__** : \`Can Be Found By Doing a!caseinfo <UID>\`
-        
-**__Scammer Server__** : \`${Server}\`
+        **__Reporter__** : \`${reporter}\`
+        **__Scammer__** : \`${Name}\`
+        **__Scammer ID__** : \`${ID}\`
+        **__Description__** : \`Can Be Found By Doing a!caseinfo <UID>\`
+        **__Attachments__** : \`Can Be Found By Doing a!caseinfo <UID>\`
+        **__Scammer Server__** : \`${Server}\`
         `);
+         .setColor(ee.color)
+        .setFooter(ee.footertext, ee.footericon)
                 message.channel.send(Success);
               });
             });
