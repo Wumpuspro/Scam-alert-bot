@@ -1,6 +1,9 @@
+
 <h1 align="center"> Scam Alert With Discord.jsv13 </h1>
 
 Don't Forgot to Suscribe to [YT](https://youtube.com/NPGARMY/) 
+
+![AKedOLRTYKOMvvrk0vRJMTquEjQUpJ4pHo-3yTYQICWf=s900-c-k-c0x00ffffff-no-rj](https://user-images.githubusercontent.com/86592522/129449267-53fdc8d5-4418-419d-8cdd-a42945778d9a.jpg)
 
 
 Join my [Discord server](https://discord.gg/UA6sSqKXpZ/)
