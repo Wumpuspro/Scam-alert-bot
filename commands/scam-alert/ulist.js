@@ -1,5 +1,6 @@
 const { Client, Message, MessageEmbed } = require('discord.js');
 const Scam = require("../Schema/ScamSchema");
+var config = require('../../config/config.json');
 let tool = require("lodash");
 
 module.exports = {
