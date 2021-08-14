@@ -21,6 +21,12 @@ Glitch: [![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a
 Repl: [![Run on Repl.it](https://repl.it/badge/github/Wumpuspro/Scam-alert-bot)](https://repl.it/github/Wumpuspro/Scam-alert-bot)
 
 
+## ✨ Contributors
+Contributions are always welcomed :D
+<a href="https://github.com/Wumpuspro/Scam-alert-bot/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Wumpuspro/Scam-alert-bot" />
+</a>
+
 Made with  ❤️ discord.jsv13 and JavaScript!
 
 
