@@ -1,6 +1,6 @@
 {
-    "token": "bot token",
-    "prefix": "bot prefix",
-    "mongooseConnectionString": "mongo url",
-    "owner": ""
+    "token": "your_bot_token",
+    "prefix": "your_bot_prefix",
+    "mongooseConnectionString": "mongo_uri",
+    "owner": "your_discord_id"
 }
