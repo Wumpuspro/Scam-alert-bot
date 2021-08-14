@@ -32,7 +32,7 @@ module.exports = {
     CaseUID = UID.number(6);
 
     message.channel.send(
-      "<:Green:765920149071986728>  **Please Tell The Scammer ID**"
+      " **Please Tell The Scammer ID**"
     );
     let collector = new discord.MessageCollector(message.channel, filter, {
       max: 1,
@@ -47,7 +47,7 @@ module.exports = {
       collector.stop();
 
       message.channel.send(
-        "<:Green:765920149071986728> **Please Tell The Scammer UserName**"
+        " **Please Tell The Scammer UserName**"
       );
       let collector2 = new discord.MessageCollector(message.channel, filter, {
         max: 1,
@@ -57,7 +57,7 @@ module.exports = {
         collector2.stop();
 
         message.channel.send(
-          "<:Green:765920149071986728> **Please Tell The Scammer Server Name , ID**"
+          "**Please Tell The Scammer Server Name , ID**"
         );
         let collector3 = new discord.MessageCollector(message.channel, filter, {
           max: 1,
@@ -67,7 +67,7 @@ module.exports = {
           collector3.stop();
 
           message.channel.send(
-            "<:Green:765920149071986728> **Please Explain How The Scam Happend**"
+            " **Please Explain How The Scam Happend**"
           );
           let collector4 = new discord.MessageCollector(
             message.channel,
@@ -79,7 +79,7 @@ module.exports = {
             collector4.stop();
 
             message.channel.send(
-              "<:Green:765920149071986728> **Can You provide Some Screen Shots ( Links Of Screen Shot )**"
+              "**Can You provide Some Screen Shots ( Links Of Screen Shot )**"
             );
             let collector5 = new discord.MessageCollector(
               message.channel,
@@ -95,7 +95,7 @@ module.exports = {
               collector5.stop();
 
               message.channel.send(
-                "<:Green:765920149071986728> **Okay Ty !! For Reporting A Scammer , Can You Tell Me The UserName Of The Kind Reporter**"
+                "**Okay Ty !! For Reporting A Scammer , Can You Tell Me The UserName Of The Kind Reporter**"
               );
               let collector6 = new discord.MessageCollector(
                 message.channel,
