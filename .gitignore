@@ -1,2 +1,11 @@
-*.agdai
-MAlonzo/**
+# Bot Configuration
+./config/config.json
+./config/embed.json
+
+# Node modules
+node_modules
+package-lock.json
+package.json
+
+# IDE
+.vscode
