@@ -3,6 +3,7 @@ const discord = require("discord.js");
 var ee = require("../../config/embed.json");
 var config = require("../../config/config.json");
 let UID = require("../Tools/ScamUID.js");
+const moment = require("moment")
 
 module.exports = {
   name: "remove",
