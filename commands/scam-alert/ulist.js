@@ -3,11 +3,11 @@ const Scam = require("../Schema/ScamSchema");
 let tool = require("lodash");
 
 module.exports = {
-    name: 'ulist',
-    aliases: ['scam-list", "list'], 
-    categories : 'info', 
-    permissions : ' ', 
-    description: 'Show Bot Ping',
+    name: "ulist",
+    aliases: ["scam-list", "list"], 
+    categories : "other", 
+    permissions : 'Embed', 
+    description: "Show scammers list",
     cooldown : 10000,
     usage: '',
     /** 
@@ -18,10 +18,10 @@ module.exports = {
     run: async(client, message, args) => {
   let ErrorEmbed = new MessageEmbed()
     .setTitle(`:x: Error`)
-    .setDescription(`<a:bach_gaye:771967681665433612> | **No Scammers Found**`)
+    .setDescription(` **No Scammers Found**`)
     .setColor(`RANDOM`)
     .setTimestamp()
-    .setFooter(`ScamAlert | Official`);
+    .setFooter(`ScamAlert `);
 
   Scam.find({ Collection: "ScamCollection" }, async (err, data) => {
     if (err) return message.channel.send(err);
@@ -31,7 +31,7 @@ module.exports = {
       let array = await Promise.all(
         data.map(
           (m) =>
-            `<a:nitro2:766229891188260884> **__Name__** : \`${m.ScammerName}\` | **__ID__** : \`${m.ScammerID}\` | **__Server Details__** : \`${m.ServerDetails}\` | **__Case UID__** : \`${m.CaseUID}\``
+            `**__Name__** : \`${m.ScammerName}\` | **__ID__** : \`${m.ScammerID}\` | **__Server Details__** : \`${m.ServerDetails}\` | **__Case UID__** : \`${m.CaseUID}\``
         )
       );
       array = await tool.chunk(array);
