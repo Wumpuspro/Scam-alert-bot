@@ -1,0 +1,5 @@
+root: ./
+title: 'Scam-alert bot'
+description: 'Scam-alert is a powerful Discord bot made with NodeJs and discord.jsv13 for reporting scammer and for making easy to owner for coding!'
+structure:
+    readme: ./README.md
