@@ -1,6 +1,7 @@
 const Scam = require("../Schema/ScamSchema");
 const discord = require("discord.js");
-var config = require('../../config/config.json');
+var ee = require("../../config/embed.json");
+var config = require("../../config/config.json");
 let UID = require("../Tools/ScamUID.js");
 
 module.exports = {
@@ -28,8 +29,9 @@ module.exports = {
 
     let embed = new discord.MessageEmbed()
       .setTitle(`Removed Case From ScamList`)
-      .setColor("RANDOM")
-      .setFooter("ScamAlert | Official").setDescription(`
+        .setColor(ee.color)
+        .setFooter(ee.footertext, ee.footericon)
+        .setDescription(`
 __Case UID__ : ${element}
 **Now The Case Has Been Removed From The ScamList**`);
     message.channel.send(embed);
