@@ -20,4 +20,5 @@ If you use this code don't forgot to give me credit
 Npg official
 
 Suscribe to [YT](https://youtube.com/NPGARMY/)
+Join my [Discord server](https://discord.gg/UA6sSqKXpZ/)
 
