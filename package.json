@@ -1,0 +1,35 @@
+{
+  "name": "Scam-alert-bot",
+  "version": "1.0.0",
+  "description": "Scam Alert With Discord.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wumpuspro/Scam-alert-bot.git"
+  },
+  "keywords": [],
+  "author": "Npg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wumpuspro/Scam-alert-bot/issues"
+  },
+  "homepage": "https://github.com/Wumpuspro/Scam-alert-bot#readme",
+  "devDependencies": {
+    "node": "^16.6.1"
+  },
+  "dependencies": {
+    "ascii-table": "0.0.9",
+    "colors": "^1.4.0",
+    "discord.js": "^13.1.0",
+    "glob": "^7.1.7",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "mongoose": "^5.13.7"
+  }
+}
