@@ -3,6 +3,7 @@ const Scam = require("../Schema/ScamSchema");
 var ee = require("../../config/embed.json");
 var config = require("../../config/config.json");
 let tool = require("lodash");
+const moment = require("moment")
 
 module.exports = {
     name: "ulist",
