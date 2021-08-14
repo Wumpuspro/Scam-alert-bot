@@ -12,3 +12,12 @@ Repl: [![Run on Repl.it](https://repl.it/badge/github/Wumpuspro/Scam-alert-bot)]
 
 Made with  ❤️ discord.jsv13 and JavaScript!
 
+
+![discordjs](https://user-images.githubusercontent.com/86592522/129449148-f6e82346-9180-4d99-b793-bd7c008ccd2e.jpg)
+
+If you use this code don't forgot to give me credit 
+
+Npg official
+
+Suscribe to [YT](https://youtube.com/NPGARMY/)
+
